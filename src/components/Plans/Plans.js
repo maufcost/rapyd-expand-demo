@@ -25,7 +25,7 @@ class Plans extends React.Component {
 			loadingFulfill: false,
 			openCreatePlanSection: false,
 			showSuccess: false,
-			allowFulfill: false
+			allowFulfill: true
 		};
 
 		this.createPlan = this.createPlan.bind(this);
@@ -69,6 +69,7 @@ class Plans extends React.Component {
 		let plans = this.state.plans
 		const hasPlans = plans && plans.length > 0;
 
+		const fulfillTime = this.state.allowFulfill ? '3 months to go' : 'Savings completed!'
 		const fulfillButtonTitle = this.state.allowFulfill
 			? 'You haven\'t saved enough yet to fulfill this product'
 			: 'Fulfill 🎉'
@@ -95,10 +96,14 @@ class Plans extends React.Component {
 							<p className='item-installment'>
 								Your monthly savings: <b>${plan.monthly}</b>
 							</p>
+							<p className='to-go'>{fulfillTime}</p>
 							<p className='item-date'>
 								Created on <Moment format="YYYY-MM-DD HH:mm" date={plan.createdAt} />
 							</p>
-							<button onClick={(e) => this.fulfillPlan(plan)}>
+							<button
+								disabled={this.state.allowFulfill}
+								onClick={(e) => this.fulfillPlan(plan)}
+							>
 								{this.state.loadingFulfill ? (
 									<span>Loading...</span>
 								) : (

@@ -6,7 +6,7 @@ import { ThemeProvider } from '@material-ui/styles';
 import Echo from '../../assets/echo.gif';
 import Mixer from '../../assets/mixer.gif';
 import Bose from '../../assets/bose.gif';
-import France from '../../assets/france.png';
+import France from '../../assets/paris.gif';
 import Toyota from '../../assets/t.png';
 
 import './CreatePlan.css';
