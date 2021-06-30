@@ -53,6 +53,7 @@
 	box-shadow: 0 0 10px var(--border);
 	padding: 15px;
 	width: 80%;
+	background-color: #fff;
 }
 
 .plans .user-plan p {
