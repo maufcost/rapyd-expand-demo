@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+import React from 'react';
+import { Router, navigate } from '@reach/router';
+
+import Header from './components/Header/Header';
+import Home from './components/Home/Home';
+import SignIn from './components/SignIn/SignIn';
+import SignUp from './components/SignUp/SignUp';
+import Plans from './components/Plans/Plans';
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+	render() {
+		return (
+			<div className='App'>
+				<Header />
+				<Router>
+					<Home path='/' />
+					<SignIn path='/sign-in' />
+					<SignUp path='/sign-up' />
+					<Plans path='/plans' />
+				</Router>
+			</div>
+		)
+	}
 }
 
 export default App;
