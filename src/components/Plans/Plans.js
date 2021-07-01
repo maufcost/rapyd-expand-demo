@@ -77,7 +77,7 @@ class Plans extends React.Component {
 		const success = (
 			<div className='success'>
 				<p>Congratulations! ✅</p>
-				<small>Your Echo Smart Speaker has been shipped. We emailed you any additional information.</small>
+				<small>We emailed you any additional information, including shipping details or tickets.</small>
 			</div>
 		)
 
@@ -86,7 +86,13 @@ class Plans extends React.Component {
 				return (
 					<div className='user-plan' key={ix}>
 						<div className='img-container'>
-							<img src={plan.img} alt='Plan product' />
+							<img
+								src={plan.img}
+								alt='Plan product'
+								onClick={() => {
+									this.setState({ allowFulfill: !this.state.allowFulfill })
+								}}
+							/>
 						</div>
 						<section>
 							<p className='item-name'>{plan.name}</p>
@@ -123,7 +129,7 @@ class Plans extends React.Component {
 					) : (
 						<h1 className='title'>Plan your savings for free</h1>
 					)}
-					<small className='sub-title'>You don't have to pay money to save money</small>
+					<small className='sub-title'>Don't pay money to save money!</small>
 
 					<main>
 						{hasPlans ? (
@@ -148,11 +154,6 @@ class Plans extends React.Component {
 					</main>
 					<div className='footer-bg'></div>
 				</div>
-				<button className='hide-me' onClick={() => {
-					this.setState({ allowFulfill: !this.state.allowFulfill })
-				}}>
-					allow fulfill
-				</button>
 			</div>
 		)
 	}

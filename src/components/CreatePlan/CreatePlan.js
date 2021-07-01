@@ -8,6 +8,7 @@ import Mixer from '../../assets/mixer.gif';
 import Bose from '../../assets/bose.gif';
 import France from '../../assets/paris.gif';
 import Toyota from '../../assets/t.png';
+import PlusIcon from '../../assets/plus.svg';
 
 import './CreatePlan.css';
 
@@ -192,7 +193,7 @@ class CreatePlan extends React.Component {
 			<div className='create-plan' style={this.state.style}>
 				<header>
 					<p className='title'>Pick the item you'll be saving for:</p>
-					<small>Items scraped directly from Amazon</small>
+					<small>Listings provided by Amazon</small>
 				</header>
 				<div className='info'>
 					<label htmlFor='how-much'>How much is your expected monthly income?</label>
@@ -225,6 +226,7 @@ class CreatePlan extends React.Component {
 							onChange={this.onChangeSlider}
 						/>
 					</ThemeProvider>
+					<span className='sweet-spot'>Recommended: halfway through the slider</span>
 				</div>
 				{this.state.selectedItem ? (
 					<section>
@@ -250,7 +252,7 @@ class CreatePlan extends React.Component {
 					{this.state.loading ? (
 						<span>Loading...</span>
 					) : (
-						<span>👉 Create plan</span>
+						<span><img src={PlusIcon} alt='Create plan' /> Create plan</span>
 					)}
 				</button>
 			</div>

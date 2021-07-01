@@ -42,7 +42,7 @@ class Home extends React.Component {
 				<div className='home'>
 					<header>
 						<h1>{greeting}</h1>
-						<p>Smiling makes you happier</p>
+						<p>Did you know? At least 20% of your income should go towards your priorities</p>
 					</header>
 					{this.state.flashMessage && (
 						<div className='flash-message'>
@@ -51,12 +51,12 @@ class Home extends React.Component {
 					)}
 					<section className='summary'>
 						<div id='first'>
-							<p>Your balance in cash</p>
+							<p>Bank account balance</p>
 							<p className='value'>$662.56</p>
 						</div>
 						<div>
-							<p>Investments</p>
-							<p className='value'>$3,791.25</p>
+							<p>Total plans balance</p>
+							<p className='value'>$791.25</p>
 						</div>
 					</section>
 
@@ -69,8 +69,8 @@ class Home extends React.Component {
 						className='special-btn'
 						onClick={() => navigate('/plans')}
 					>
-						<p>Plan my savings</p>
-						<small>Your next trip, car, or anything</small>
+						<p>My plans</p>
+						<small>Save for your next purchase, trip, and more</small>
 					</button>
 					{/*
 					<button

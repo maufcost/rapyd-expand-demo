@@ -20,12 +20,12 @@
 .create-plan .amount-div {
 	display: flex;
 	align-items: center;
-	gap: 10px;
 }
 
 .create-plan .amount-div span {
 	color: var(--malachi);
 	font-weight: 900;
+	margin-right: 10px;
 }
 
 .create-plan label {
@@ -39,6 +39,14 @@
 	border-radius: 10px;
 	box-sizing: border-box;
 	border: 1px solid var(--grey);
+}
+
+.create-plan .sweet-spot {
+	background-color: gold;
+	color: var(--chris);
+	border-radius: 15px;
+	padding: 5px 8px;
+	font-size: 0.9em;
 }
 
 .create-plan #list {
@@ -120,6 +128,10 @@
 
 .create-plan .create-plan-btn:hover {
 	background-color: var(--malachi-dark);
+}
+
+.create-plan .create-plan-btn img {
+	width: 10px;
 }
 
 .create-plan .selected-item {
