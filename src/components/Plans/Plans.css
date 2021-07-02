@@ -143,9 +143,37 @@
 	/* color: #fff; */
 }
 
-.plans .success p {
+.plans .success .title {
 	font-weight: bold;
 	font-size: 1.3em;
+	margin-bottom: 6px;
+}
+
+.plans .success .cb span {
+	background-color: var(--malachi);
+	color: #fff;
+	border-radius: 3px;
+	padding: 3px 8px;
+	font-weight: 800;
+}
+
+.plans .success small {
+	color: #757474;
+	display: inline-block;
+	margin-top: 6px;
+}
+
+.plans .success small span {
+	display: inline-block;
+	font-size: 0.9em;
+	border: 1px solid var(--border);
+	border-radius: 15px;
+	padding: 4px 9px;
+	box-shadow: 0 0 10px var(--border);
+	color: #fff;
+	font-weight: 800;
+	background: rgb(48,206,241);
+	background: linear-gradient(9deg, rgba(48,206,241,1) 0%, rgba(49,208,173,1) 100%);
 }
 
 .plans-container .hide-me {

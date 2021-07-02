@@ -76,8 +76,12 @@ class Plans extends React.Component {
 
 		const success = (
 			<div className='success'>
-				<p>Congratulations! ✅</p>
-				<small>We emailed you any additional information, including shipping details or tickets.</small>
+				<p className='title'>Congratulations ✅</p>
+				<p className='cb'>You just earned <span>$18.06</span> in cashback!</p>
+				<small>
+					We emailed you any additional information, including
+					shipping details or tickets at <span>william.fmj@gmail.com</span>
+				</small>
 			</div>
 		)
 
