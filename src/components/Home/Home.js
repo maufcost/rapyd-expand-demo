@@ -42,7 +42,7 @@ class Home extends React.Component {
 				<div className='home'>
 					<header>
 						<h1>{greeting}</h1>
-						<p>Did you know? At least 20% of your income should go towards your priorities</p>
+						<p>Quick Tip: at least 20% of your monthly income should go to your savings</p>
 					</header>
 					{this.state.flashMessage && (
 						<div className='flash-message'>
